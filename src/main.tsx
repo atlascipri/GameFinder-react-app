@@ -1,7 +1,10 @@
-import Message from './Message';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+import 'bootstrap/dist/css/bootstrap.css'
 
-function App(){
-  return <div> <Message/> </div>
-}
-
-export default App;
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
